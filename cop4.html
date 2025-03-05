@@ -1,0 +1,474 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Timeless Elegance - Home</title>
+    <link rel="stylesheet" href="COP4.css">
+    <style>
+        /* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #282828;
+    color: #FBFDF8;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2, h3 {
+    color: #FFBB75;
+}
+
+p {
+    color: #d8d8d8;
+}
+
+button {
+    background: #FFBB75;
+    color: #282828;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ebaa6a;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+#listSec {
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+}
+
+#listSec li {
+    margin: 0 15px;
+}
+
+#listSec li a {
+    position: relative;
+    padding-bottom: 5px;
+}
+
+#listSec li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #FFBB75;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s;
+}
+
+#listSec li a:hover::after, #listSec li a.active::after {
+    width: 100%;
+}
+
+/* Hero Section (Main Page) */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 5%;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 80%;
+}
+
+/* Products Section */
+#products {
+    padding: 40px 5%;
+}
+
+#products h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 50px;
+}
+
+.category {
+    margin-bottom: 60px;
+}
+
+.category-title {
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.product {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-item {
+    background: #fff;
+    color: #282828;
+    width: 220px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.product-item h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.product-item p {
+    font-size: 1em;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+}
+
+/* Footer Styles */
+footer {
+    background: #FFBB75;
+    color: #282828;
+    text-align: center;
+    padding: 15px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image {
+        margin-top: 30px;
+    }
+
+    .product {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* Contact Section */
+.contact-section, .contact-page {
+    padding: 50px 5%;
+    background-color: #f8f8f8;
+    color: #282828;
+}
+
+.contact-section h2, .contact-page h2 {
+    text-align: center;
+    color:#FFBB75;
+    margin-bottom: 30px;
+}
+
+.contact-section fieldset, .contact-page fieldset {
+    border: 1px solid #ddd;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.contact-section legend, .contact-page legend {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.contact-section label, .contact-page label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.contact-section input, .contact-page input,
+.contact-section textarea, .contact-page textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-section button, .contact-page button {
+    background-color: #fa1a16;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.contact-section button:hover, .contact-page button:hover {
+    background-color: #ebaa6a;
+}
+.contact-section input,
+.contact-section textarea {
+    opacity: 0;
+    animation: fadeInForm 0.8s forwards;
+}
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <!-- In the navigation bar -->
+        <a href="index.html" class="logo">Timeless Elegance - Watches</a>
+        <ul id="listSec">
+            <li><a href="indeX.html" class="active">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="gift.html">Gift Sets</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="btn-sec">
+            <button onclick="window.location.href='order.html'">Order Now</button>
+            <div class="toggle-btn" id="toggleBtn">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero Section -->
+    <div class="hero">
+        <a href="index.html"></a>
+        <div class="hero-content">
+            <h1>Eclipse Timepiece Watch</h1>
+            <p>Welcome to Timeless Elegance,Where time meets craftsmanship.</p>
+            <button onclick="window.location.href='products.html'">Order Now</button>
+        </div>
+        <div class="hero-image">
+            <img src="C:\Users\user\Desktop\Timeless-Elegance\watchelegance.png" alt="Timeless Elegance Watch">
+        </div>
+    </div>
+    <!--Why Choose Our Watches ?-->
+    <div class="product-sec">
+        <a href="index.html"></a>
+
+        <h1>
+          Why Choose Our Watches ?
+        </h1>
+        <p>Our watches combine timeless design, reliable performance, and exceptional quality, ensuring you always look and feel your best.</p>
+    
+        <div class="card-sec">
+            <div class="card">
+                <img src="images/interactive-design.png" alt=""/>
+                <h2>Easy Shopping and Great Service</h2>
+                <p>Shopping with us is simple and hassle-free. We offer competitive prices, fast shipping, and easy returns. Our customer support team is always ready to help, making sure your buying experience is smooth from start to finish.</p>
+            </div>
+    
+            <div class="card">
+                <img src="images/install-stopwatch.png" alt=""/>
+                <h2>A Watch for Every Style</h2>
+                <p>We believe a watch is more than just a tool to tell time – it’s a reflection of you. Our collection includes a wide range of styles, from classic designs to modern looks, so you can find the perfect match for your personality.</p>
+            </div>
+    
+            <div class="card">
+                <img src="images/gps-tracking.png" alt=""/>
+                <h2>Quality You Can Trust</h2>
+                <p>At Timeless Elegance, we offer high-quality watches made by top brands. Each timepiece is carefully crafted to ensure long-lasting durability and style. Whether you’re after a luxury watch or a simple, everyday design, we have something for every taste.</p>
+            </div>
+        </div>
+       </div>
+       
+    </div>
+<!-- products.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Timeless Elegance - Products</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Products Section -->
+    <section id="products">
+        <h2>Our Collections</h2>
+<!-- Women's Collection -->
+<div id="women" class="category">
+    <h2 class="category-title">Women’s Collection</h2>
+    <div class="product">
+        <div class="product-item"><img src="C:\Users\user\Desktop\pics\womanwatch1.jpeg" alt="Watch 1"><h3>Elegance Everyday Watch</h3><p>Simplistic yet stunning, this watch features a crisp white dial, delicate case, and luxurious leather strap. Ideal for your everyday style.<br> 3.000,00MAD</p><button class="buy-btn">Buy Now</button></div>
+        <div class="product-item">
+            <img src="C:\Users\user\Desktop\pics\womanwatch2.jpeg" alt="Pure Simplicity Watch">
+            <h3>Pure Simplicity Watch</h3>
+            <p>
+                Minimalist design with a clean white dial, slim case, and soft leather strap. A versatile choice for everyday elegance.
+                <br><strong>2,800.00MAD</strong>
+            </p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-item">
+            <img src="C:\Users\user\Desktop\pics\womanwatch3.jpeg" alt="Timeless Chic Watch">
+            <h3>Timeless Chic Watch</h3>
+            <p>
+                Designed with simplicity in mind, this watch boasts a white dial, sleek case, and a soft leather strap. A go-to piece for effortless style.
+                <br><strong>2,900.00MAD</strong>
+            </p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-item">
+            <img src="C:\Users\user\Downloads\Crystal watches for ladies Michael Kors.jpeg" alt="Effortless Elegance Watch">
+            <h3>Effortless Elegance Watch</h3>
+            <p>
+                Clean dial and slim case, paired with a soft leather strap for a minimalist yet refined look. Perfect for all-day wear.
+                <br><strong>2,750.00MAD</strong>
+            </p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-item">
+            <img src="C:\Users\user\Downloads\téléchargement.jpeg" alt="Chic Minimal Watch">
+            <h3>Chic Minimal Watch</h3>
+            <p>
+                Elegance in its purest form with a clean white dial, slim case, and soft leather strap. The perfect accessory for any occasion.
+                <br><strong>2,900.00MAD</strong>
+            </p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+       
+        <!-- Men's Collection -->
+<div id="men" class="category">
+    <h2 class="category-title">Men’s Collection</h2>
+    <div class="product">
+        <div class="product-item">
+            <img src="C:\Users\user\Desktop\pics\new1.jpeg" alt="Luxury Blue">
+            <h3>Luxury Blue</h3>
+            <p>
+                Bold and refined.
+                <br><strong>2,750.00MAD</strong>
+            </p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-item">
+            <img src="C:\Users\user\Desktop\pics\new2.jpeg" alt="Classic Silver">
+            <h3>Classic Silver</h3>
+            <p>
+                Elegance for the modern man.
+                <br><strong>2,850.00MAD</strong>
+            </p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-item">
+            <img src="C:\Users\user\Desktop\pics\new3.jpeg" alt="Sporty Black">
+            <h3>Sporty Black</h3>
+            <p>
+                Perfect for an active lifestyle.
+                <br><strong>2,900.00MAD</strong>
+            </p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-item">
+            <img src="C:\Users\user\Desktop\pics\new4.jpeg" alt="Minimalist Black">
+            <h3>Minimalist Black</h3>
+            <p>
+
+                For distinguished gentlemen.
+                <br><strong>2,800.00MAD</strong>
+            </p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product-item">
+            <img src="C:\Users\user\Desktop\pics\new5.jpeg" alt="Premium Leather">
+            <h3>Premium Leather</h3>
+            <p>
+                Simple yet stylish.
+                <br><strong>2,650.00MAD</strong>
+            </p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+                <!-- Gifts Sets -->
+                <div id="gift" class="category">
+                    <h2 class="category-title">Gift Sets</h2>
+                    <div class="product">
+                        <div class="product-item"><img src="C:\Users\user\Desktop\pics\coffret1.jpeg" alt="Gift 1"><h3>Luxury Set </h3><p>Perfect for him.<br> 2.750,00MAD</p><button class="buy-btn">Buy Now</button></div>
+                        <div class="product-item"><img src="C:\Users\user\Desktop\pics\coffret2.jpeg" alt="Gift 2"><h3>Elegance Set</h3><p>For her timeless style.<br> 2.800,00MAD</p><button class="buy-btn">Buy Now</button></div>
+                        <div class="product-item"><img src="C:\Users\user\Desktop\pics\coffret3.jpeg" alt="Gift 3"><h3>Modern Set</h3><p>A gift to remember.<br> 2.950,00MAD</p><button class="buy-btn">Buy Now</button></div>
+                        <div class="product-item"><img src="C:\Users\user\Desktop\pics\coffret4.jpeg" alt="Gift 4"><h3>Classic Set</h3><p>A perfect match.<br> 2.900,00MAD</p><button class="buy-btn">Buy Now</button></div>
+            </div>
+        </div>
+    </section>
+<!-- Contact Section -->
+<div id="contact" class="contact-section">
+    <a href="index.html"></a>
+
+    <h2>Contact Us</h2>
+    <fieldset>
+        <legend>Get in Touch</legend>
+        <form action="submit_form.php" method="POST">
+            <label for="name">Name :</label><br>
+            <input type="text" id="name" name="name" required><br>
+            <label for="email">Email :</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <label for="message">Message :</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br>
+            <button type="submit">Submit</button>
+        </form>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Timeless Elegance. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,252 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #282828;
+    color: #FBFDF8;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2, h3 {
+    color: #FFBB75;
+}
+
+p {
+    color: #d8d8d8;
+}
+
+button {
+    background: #FFBB75;
+    color: #282828;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #ebaa6a;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+#listSec {
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+}
+
+#listSec li {
+    margin: 0 15px;
+}
+
+#listSec li a {
+    position: relative;
+    padding-bottom: 5px;
+}
+
+#listSec li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #FFBB75;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s;
+}
+
+#listSec li a:hover::after, #listSec li a.active::after {
+    width: 100%;
+}
+
+/* Hero Section (Main Page) */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 5%;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 80%;
+}
+
+/* Products Section */
+#products {
+    padding: 40px 5%;
+}
+
+#products h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 50px;
+}
+
+.category {
+    margin-bottom: 60px;
+}
+
+.category-title {
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.product {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-item {
+    background: #fff;
+    color: #282828;
+    width: 220px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.product-item h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.product-item p {
+    font-size: 1em;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+}
+
+/* Footer Styles */
+footer {
+    background: #FFBB75;
+    color: #282828;
+    text-align: center;
+    padding: 15px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image {
+        margin-top: 30px;
+    }
+
+    .product {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* Contact Section */
+.contact-section, .contact-page {
+    padding: 50px 5%;
+    background-color: #f8f8f8;
+    color: #282828;
+}
+
+.contact-section h2, .contact-page h2 {
+    text-align: center;
+    color:#FFBB75;
+    margin-bottom: 30px;
+}
+
+.contact-section fieldset, .contact-page fieldset {
+    border: 1px solid #ddd;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.contact-section legend, .contact-page legend {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.contact-section label, .contact-page label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.contact-section input, .contact-page input,
+.contact-section textarea, .contact-page textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-section button, .contact-page button {
+    background-color: #fa1a16;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.contact-section button:hover, .contact-page button:hover {
+    background-color: #ebaa6a;
+}
+
